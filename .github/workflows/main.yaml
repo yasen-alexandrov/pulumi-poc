@@ -17,7 +17,7 @@ jobs:
       - name: Deploy Infra
         run: |
           pipenv sync
-          pipenv run pulumi preview --yes --stack stack-name --suppress-outputs
+          pipenv run pulumi preview --yes --stack dev --suppress-outputs
         env:
           ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
