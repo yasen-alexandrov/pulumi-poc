@@ -16,6 +16,7 @@ jobs:
           echo "/home/runner/.pulumi/bin" >> $GITHUB_PATH
       - name: Preview Pulumi
         run: |
+          sudo pip install pipenv
           pipenv sync
           pipenv run pulumi preview --stack dev
         env:
