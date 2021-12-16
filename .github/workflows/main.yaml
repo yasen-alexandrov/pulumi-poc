@@ -19,7 +19,8 @@ jobs:
           sudo pip install pipenv
           pipenv lock
           pipenv sync
-          pipenv run pulumi preview --yes --stack dev --suppress-outputs
+          pipenv run npm install
+          pipenv run pulumi preview --stack dev --suppress-outputs
         env:
           ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
