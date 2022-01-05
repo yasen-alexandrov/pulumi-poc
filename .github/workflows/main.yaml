@@ -3,7 +3,7 @@ on:
   - pull_request
 jobs:
   preview:
-    name: Preview
+    name: Provision
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,7 +20,7 @@ jobs:
           pipenv lock
           pipenv sync
           pipenv run npm install
-          pipenv run pulumi preview --stack dev --suppress-outputs
+          pipenv run pulumi up --stack dev --suppress-outputs
         env:
           ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
