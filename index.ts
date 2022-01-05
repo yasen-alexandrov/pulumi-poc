@@ -6,7 +6,7 @@ import * as storage from "@pulumi/azure-native/storage";
 const resourceGroup = new resources.ResourceGroup("rgPulumiStateInAzure",{location: "West Europe"});
 
 // Create an Azure resource (Storage Account)
-const storageAccount = new storage.StorageAccount("sadevelopbranch1", {
+const storageAccount = new storage.StorageAccount("sadevelopbranch", {
     resourceGroupName: resourceGroup.name,
     sku: {
         name: storage.SkuName.Standard_LRS,
