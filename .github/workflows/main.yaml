@@ -1,9 +1,11 @@
 name: Main
 on:
-  - pull_request
+  push:
+    branches:
+      - master
 jobs:
   preview:
-    name: Preview
+    name: Provision
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,8 +18,11 @@ jobs:
           echo "/home/runner/.pulumi/bin" >> $GITHUB_PATH
       - name: Deploy Infra
         run: |
+          sudo pip install pipenv
+          pipenv lock
           pipenv sync
-          pipenv run pulumi preview --yes --stack stack-name --suppress-outputs
+          pipenv run npm install
+          pipenv run pulumi up --yes --stack dev --suppress-outputs
         env:
           ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
