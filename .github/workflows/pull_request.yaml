@@ -1,8 +1,6 @@
 name: PR
 on:
-  pull_request:
-    branches:
-      - develop
+  - pull_request
 jobs:
   preview:
     name: Preview
