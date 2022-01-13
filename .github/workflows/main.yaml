@@ -1,6 +1,8 @@
 name: Main
 on:
-  - pull_request
+  push:
+    branches:
+      - master
 jobs:
   preview:
     name: Provision
