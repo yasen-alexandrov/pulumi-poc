@@ -10,11 +10,11 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - name: Install Infra
+      - name: Setup Pulumi
         run: |
           curl -fsSL https://get.pulumi.com | sh
           echo "/home/runner/.pulumi/bin" >> $GITHUB_PATH
-      - name: Preview Pulumi
+      - name: Preview Infra
         run: |
           sudo pip install pipenv
           pipenv lock
