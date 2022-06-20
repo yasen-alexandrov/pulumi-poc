@@ -1,3 +1,5 @@
 name: stateOnAzure
 runtime: nodejs
 description: A minimal Azure Native TypeScript Pulumi program
+options:
+  refresh: always
