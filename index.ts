@@ -12,7 +12,7 @@ const storageAccount = new storage.StorageAccount(`sa5${getStack()}`, {
     sku: {
         name: storage.SkuName.Standard_LRS,
     },
-    tags : { "environment": `env-${getStack()}`},
+    // tags : { "environment": `env-${getStack()}`},
     kind: storage.Kind.StorageV2,
 });
 
