@@ -23,11 +23,11 @@ jobs:
     # Install dependencies and  run "pulumi preview" command
       - name: Preview Infra
         run: |
-          # sudo pip install pipenv
-          # pipenv lock
-          # pipenv sync
-          # pipenv run npm install
-          pulumi preview --stack prod
+          sudo pip install pipenv
+          pipenv lock
+          pipenv sync
+          pipenv run npm install
+          pipenv run pulumi preview --stack prod
         env:
         # Supplying environment variables to interact with Azure Cloud provider
         # and allow Pulumi CLI to communicate with Pulumi Service  
