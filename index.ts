@@ -7,7 +7,7 @@ import {getStack, getProject} from "@pulumi/pulumi";
 const resourceGroup = new resources.ResourceGroup("rgPulumiStateInAzure",{location: "West Europe"});
 
 // Create an Azure resource (Storage Account)
-const storageAccount = new storage.StorageAccount(`sa5${getStack()}`, {
+const storageAccount = new storage.StorageAccount(`sa7${getStack()}`, {
     resourceGroupName: resourceGroup.name,
     sku: {
         name: storage.SkuName.Standard_LRS,
