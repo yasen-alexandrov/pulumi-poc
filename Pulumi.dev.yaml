@@ -1,8 +1,8 @@
 encryptionsalt: v1:HnWKH2aiJLU=:v1:w/M36nZlYy4Sc9ZH:bgjBGAYodbI40iZ0WM3zig69azNubA==
 config:
-  azure-native:clientId: f6765f66-46b0-4acb-b390-7910b46e23d9
+  azure-native:clientId: ee53a49a-2531-46ed-84d9-a5227dfd2e57
   azure-native:clientSecret:
-    secure: v1:jRlGBsme+1JXc2Qd:iJqfO3pkhYqcjj3BH8xcdqTvcG1Ge4kehZFihvWGMy0uOn5S812J6xrrdRWpT+rIsTRIKKkwECg=
+    secure: v1:t9tEFfjEgvL1NaaS:xypyDf582W0dktF/QXil6conCggWq3xvldgQVKtvXT+t6rX4aVpCAoz2+gylKZc+79EMVILGZcs=
   azure-native:location: WestEurope
   azure-native:subscriptionId: f8dbe399-c6cf-4d35-9789-85dd58d65327
   azure-native:tenantId: 0ae51e19-07c8-4e4b-bb6d-648ee58410f4
