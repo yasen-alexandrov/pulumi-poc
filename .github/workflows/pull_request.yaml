@@ -8,7 +8,7 @@ jobs:
   preview:
     name: Preview
     # Set the type of machine to run on
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
     # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout
@@ -27,7 +27,7 @@ jobs:
           pipenv lock
           pipenv sync
           pipenv run npm install
-          pipenv run pulumi preview --stack prod
+          pipenv run pulumi preview --stack dev
         env:
         # Supplying environment variables to interact with Azure Cloud provider
         # and allow Pulumi CLI to communicate with Pulumi Service  
